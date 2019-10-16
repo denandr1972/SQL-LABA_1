@@ -10,7 +10,7 @@
 
 DROP TABLE db_laba.dbo.books_dandrosov;
 
-CREATE TABLE db_laba.dbo.books_dandrosov 
+CREATE TABLE db_laba.dbo.books_dandrosov
 
 (book_ID int NOT NULL,
 name_of_the_book varchar(20),
@@ -21,9 +21,9 @@ duedate varchar(20)
 
 insert
 	into
-	db_laba.dbo.books_dandrosov 
+	db_laba.dbo.books_dandrosov
 select
-	1,'Name of the Rose', 'Umberto', 'Eco','2020-01-01' 
+	1,'Name of the Rose', 'Umberto', 'Eco','2020-01-01'
 UNION all
 select
 	2,'The Magus', 'John','Fowels','2019-12-31'
@@ -34,9 +34,9 @@ select
 SELECT
 	*
 from
-	db_laba.dbo.books_dandrosov 
+	db_laba.dbo.books_dandrosov
 
-	
+
 
 --check
 SELECT ORDINAL_POSITION, COLUMN_NAME, DATA_TYPE, CHARACTER_MAXIMUM_LENGTH, IS_NULLABLE
@@ -55,9 +55,9 @@ alter table db_laba.dbo.books_dandrosov add description char(32);
 
 insert
 	into
-	db_laba.dbo.books_dandrosov 
+	db_laba.dbo.books_dandrosov
 select
-	4,'Jane Aire', 'Sharlotte', 'Bronte','2020-01-01', 'roman' 
+	4,'Jane Aire', 'Sharlotte', 'Bronte','2020-01-01', 'roman'
 UNION all
 select
 	5,'Golden Calb', 'Ilja','Ilf','2019-12-31','roman'
@@ -98,9 +98,9 @@ ALTER COLUMN description NVARCHAR(200)
 
 insert
 	into
-	db_laba.dbo.books_dandrosov 
+	db_laba.dbo.books_dandrosov
 select
-	7,'Eugene Onegin', 'Alexander', 'Pushkin','2019-11-01','Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.' 
+	7,'Eugene Onegin', 'Alexander', 'Pushkin','2019-11-01','Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
 
 SELECT
 	*
@@ -120,11 +120,11 @@ WHERE TABLE_NAME = 'books_dandrosov'
 написать проверочный скрипт на содержание вашей новой таблицы
 
 
---часть 1 - создание табицы с 3 строками 
+--часть 1 - создание табицы с 3 строками
 
 DROP TABLE db_laba.dbo.books_dandrosov;
 
-CREATE TABLE db_laba.dbo.books_dandrosov 
+CREATE TABLE db_laba.dbo.books_dandrosov
 
 (book_ID int NOT NULL,
 name_of_the_book varchar(20),
@@ -135,9 +135,9 @@ duedate varchar(20)
 
 insert
 	into
-	db_laba.dbo.books_dandrosov 
+	db_laba.dbo.books_dandrosov
 select
-	1,'Name of the Rose', 'Umberto', 'Eco','2020-01-01' 
+	1,'Name of the Rose', 'Umberto', 'Eco','2020-01-01'
 UNION all
 select
 	2,'The Magus', 'John','Fowels','2019-12-31'
@@ -164,9 +164,9 @@ alter table db_laba.dbo.books_dandrosov add description char(32);
 
 insert
 	into
-	db_laba.dbo.books_dandrosov 
+	db_laba.dbo.books_dandrosov
 select
-	4,'Jane Aire', 'Sharlotte', 'Bronte','2020-01-01', 'roman' 
+	4,'Jane Aire', 'Sharlotte', 'Bronte','2020-01-01', 'roman'
 UNION all
 select
 	5,'Golden Calb', 'Ilja','Ilf','2019-12-31','roman'
@@ -174,7 +174,7 @@ UNION all
 select
 	6,'12 chairs', 'Ewgeny','Petrow','2019-11-05','roman'
 
--- не понял, нужно ли это делать, но заполняю певые три строки в поле description 
+-- не понял, нужно ли это делать, но заполняю певые три строки в поле description
 
 --update db_laba.dbo.books_dandrosov
 --set description = 'roman' where book_ID IN (1,2,3);
@@ -191,7 +191,7 @@ FROM sys.indexes
 WHERE object_id = OBJECT_ID('db_laba.dbo.books_dandrosov')
 --__________________________________________________________________________________
 
--- добавляю строку 7 с  'Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+-- добавляю строку 7 с  'Lorem ipsum dolor sit amet, consectetur adipiscing elit,
 --                       sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
 -- в поле description
 
@@ -202,9 +202,9 @@ CHECK (LEN(description)>=3)
 
 insert
 	into
-	db_laba.dbo.books_dandrosov 
+	db_laba.dbo.books_dandrosov
 select
-	7,'Eugene Onegin', 'Alexander', 'Pushkin','2019-11-01','Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.' 
+	7,'Eugene Onegin', 'Alexander', 'Pushkin','2019-11-01','Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
 
 --проверка
 
@@ -222,7 +222,7 @@ WHERE TABLE_NAME = 'books_dandrosov'
 ALTER TABLE db_laba.dbo.books_dandrosov
 
 
---SELECT
---	*
---from
---	db_laba.dbo.books_dandrosov 
+SELECT
+	*
+from
+db_laba.dbo.books_dandrosov 
